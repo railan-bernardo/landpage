@@ -1,0 +1,185 @@
+<div class="content-wrapper" style="min-height: 1136px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Ficha Técnica
+        <small>#{$os.idos}</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">os</a></li>
+        <li class="active">ficha</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+     
+       
+         <div class="row invoice-info" style="margin: 15px 0;">
+              <div class="col-sm-4 invoice-col">
+                <img src="/res/admin/dist/img/logomarca-1.png">
+            </div>
+         
+             <div class="col-sm-4 invoice-col">
+              <address>
+                <span><strong> <small>Nº # {if="$os.idos < 10"}0{$os.idos}{else}{$os.idos}{/if}</small></strong></span> 
+              </address>
+            </div>
+            
+            <!-- <div class="col-sm-4 invoice-col">-->
+            <!--  <address>-->
+            <!--     assistencia@cacursos.com.br<br>-->
+            <!--     cristiano@cacursos.com.br<br>-->
+            <!--  </address>-->
+            <!--</div>-->
+            
+       </div>
+        <!-- /.invoice -->
+     <div class="col-md-12" style="margin-bottom: 25px;">
+         <span style="display: block; width: 100%;"><strong>Telefone: 982001842<br> E-mail:  cacursos1@gmail.com</strong><small class="pull-right"><strong style="font-size: 1.2em;">Endereço: </strong>Rua 2 nº 121 centro, CEP 74013-020, Goiânia-Goiás</small></span>
+     </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+          <strong>Informações Básica</strong>
+          <address>
+            <strong>Cliente</strong>:&nbsp; {$os.osclient}<br>
+            <strong>CPF</strong>: &nbsp;{$os.nrcpf}<br>
+            <strong>Telefone</strong>: &nbsp;{$os.nrphone}<br>
+            <strong>Cidade</strong>: &nbsp;{$os.oscity}<br>
+            <strong>Bairro</strong>: &nbsp;{$os.osbairro}<br>
+            <strong>Atendente</strong>: &nbsp;{$os.consultant}<br>
+            <strong>Técnico</strong>: &nbsp;{$os.ostecnico}
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          <strong>Ficha do Produto</strong>
+          <address>
+            <strong>Produto</strong>: &nbsp;{$os.osproduct}<br>
+            <strong>Marca</strong>: &nbsp;{$os.osmarc}<br>
+            <strong>Modelo</strong>: &nbsp;{$os.osmodel}<br>
+            <strong>IMEI</strong>: &nbsp;{$os.osimei}<br>
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+         <strong>Relatório</strong>
+          <address>
+            <strong>Defeito passado pelo cliente</strong>: &nbsp;{$os.osdefectclient}<br>
+            <strong>Defeito Constatado</strong>: &nbsp;{$os.osdefect}<br>
+          </address>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Qty</th>
+              <th>Produto</th>
+              <th>VL.Unitário</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{$os.osqty}</td>
+              <td>{$os.ositem}</td>
+              <td>{$os.osprice}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+                    <p class="lead pull-left">Deu entrada em: {if="$os.osexit == 0000-00-00"}Pedente{else}{function="fomatDate($os.dtregister)"}{/if}</p>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+             <p class="lead">Data de Saida: {if="$os.osexit == 0000-00-00"}Pedente{else}{function="fomatDate($os.osexit)"}{/if}</p>
+
+          <div class="table-responsive">
+            <table class="table">
+              <tbody><tr>
+                <!--<th style="width:50%">Subtotal:</th>-->
+                <!--<td>$250.30</td>-->
+              </tr>
+              <!--<tr>-->
+              <!--  <th>Tax (9.3%)</th>-->
+              <!--  <td>$10.34</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+              <!--  <th>Shipping:</th>-->
+              <!--  <td>$5.80</td>-->
+              <!--</tr>-->
+              <tr>
+                <th>Total:</th>
+                <td>{$os.osprice}</td>
+              </tr>
+            </tbody></table>
+            
+          </div>
+        </div>
+             <div class="col-md-12">
+                <p style=" width: 100%;"><strong>Retirado por:</strong> <span style=" margin-left: 80px; width: 250px; display: block; border-bottom: 1px solid #000;"></span></p>
+                
+                <div style="box-shadow: 2px 4px 15px 0 rgba(0,0,0,0.4); margin: 15px 0; padding: 15px;">
+                    <p>
+                        OBS.:
+- Relatório técnico em até 72 hrs<br/>
+- Ao assinar este documento o Cliente concorda com os termos de prestação de serviço da Empresa CA cursos.<br/>
+- Na empresa o produto somente será entregue com a apresentação deste documento ou do titular desta O.S.<br/>
+- Produtos com mais de 90 dias na empresa sera cobrado multa de 10% do valor da O.S mais 1,00 real de mora diária.<br/>
+- As partes elegem o fóro da Comarca de Goiânia-GO. "onde os serviçoes de assistência técnica serão prestados"<br/>
+- O aparelho poderá ocorrer risco de uma perca total devido a tentativa de reparo discriminado.<br/>
+- Não nos responsabilizamos por dados perdidos é recomendavel ao cliente salvar todos arquivos antes dar entrada na assistência.<br/>
+- É cobrado uma taxa de vistória no valor de <span style="font-size: 1.3em;"><strong>80,00</strong></span> reais caso o orçamento não seja aprovao.<br/>
+- Garantia de 90 dias nos serviços prestados não valendo em caso de mau uso (contato ou queda) e somente com a apresentação deste documento.
+                    </p>
+                </div>
+            </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- this row will not appear when printing -->
+
+    </section>
+    <!-- /.content -->
+    <div class="clearfix"></div>
+  </div>
+  
+      <script>
+
+    window.onload = function() {
+        
+        var header = document.querySelector('.main-header')
+        var sidebar = document.querySelector('.main-sidebar')
+        var contentHeader = document.querySelector('.content-header')
+        var wrapper = document.querySelector('.wrapper')
+        var skin = document.querySelector('.skin-blue')
+        var contentWrapper = document.querySelector('.content-wrapper')
+
+		    	window.print();
+
+		    	var time = window.setTimeout(function() {
+
+				//	window.location.href = '/admin/contratos'
+
+		    	}, 1000);
+
+	}
+
+
+</script>

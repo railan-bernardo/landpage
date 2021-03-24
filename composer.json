@@ -1,0 +1,23 @@
+{
+    "name": "railan-bernardo/sistema-de-alunos",
+    "description": "Sistema de gerenciamento de alunos",
+    "authors": [
+        {
+            "name": "Railan Bernardo",
+            "email": "railabernardo2016@gmail.com"
+        }
+    ],
+
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7":"^1.2",
+        "rain/raintpl": "3.0.0",
+        "coffeecode/uploader": "1.0.7"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Curso\\": "vendor\\cursos\\class-curso\\src"
+        }
+    }
+}

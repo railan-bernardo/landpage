@@ -1,0 +1,138 @@
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1> Relatório Técnico</h1>
+    <ol class="breadcrumb">
+      <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="/admin/os">OS</a></li>
+      <li class="active"><a href="">Relatório</a></li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+    <section class="content">
+
+       <div class="row">
+         <div class="col-md-8">
+           <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Relatório</h3>
+                </div>
+                    <!-- /.box-header -->
+               <form role="form" action="/admin/os/edit/related/{$os.idos}" method="post" enctype="multipart/form-data">
+                           <div class="box-body">
+                                  <div calss="etapa-1">
+                                      <div class="form-group">
+                                        <label for="osdefect">Defeito Constatado</label>
+                                        <input type="text" class="form-control" id="osdefect" name="osdefect" value="{$os.osdefect}">
+                                      </div>
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <label for="ositem">Peça Trocado</label>
+                                              <input type="text" class="form-control" id="ositem" name="ositem" value="{$os.ositem}">
+                                            </div>
+                                      </div>
+                                      <div class ="col-md-6">
+                                           <div class="form-group">
+                                            <label for="osprice">Preço do Item             Utilizado</label>
+                                            <input type="text" class="form-control" id="osprice" name="osprice" value="{$os.osprice}">
+                                          </div>
+                                      </div>
+                                      <div class ="col-md-6">
+                                           <div class="form-group">
+                                            <label for="osprice">Quantidade</label>
+                                            <input type="text" class="form-control" id="osqty" name="osqty" value="{$os.osqty}">
+                                          </div>
+                                      </div>
+                                      <div class ="col-md-12">
+                                        <div class="form-group">
+                                         <label for="oscompatibility">Compatibilidade</label>
+                                         <input type="text" class="form-control" id="oscompatibility" name="oscompatibility" value="{$os.oscompatibility}">
+                                       </div>
+                                       </div>
+
+                                      <div class ="col-md-6">
+                                        <div class="form-group">
+                                         <label for="osimage">Imagen 1</label>
+                                         <input type="hidden" class="form-control image1"  id="osimage" name="osimageon">
+                                         <input type="file" class="form-control file1" accept="image/jpeg, image/jpg, image/png, image/wep" id="osimage" name="imageon">
+                                       </div>
+                                   </div>
+                                   <div class ="col-md-6">
+                                    <div class="form-group">
+                                     <label for="osimage">Imagen 2</label>
+                                     <input type="hidden" class="form-control image2"  id="osimage" name="osimagetwo">
+                                     <input type="file" class="form-control file2" accept="image/jpeg, image/jpg, image/png, image/wep" id="osimage" name="imagetwo">
+                                   </div>
+                               </div>
+                                   <div class ="col-md-6">
+                                    <div class="form-group">
+                                    <label for="ospricecost">Preço de custo</label>
+                                    <input type="text" class="form-control" id="ospricecost" name="ospricecost" value="{$os.ospricecost}">
+                                  </div>
+                              </div>
+                              <div class ="col-md-6">
+                                <div class="form-group">
+                                <label for="ossupplier">Preço de fornecedor</label>
+                                <input type="text" class="form-control" id="ossupplier" name="ossupplier" value="{$os.ossupplier}">
+                              </div>
+                          </div>
+                                      <div class ="col-md-12">
+                                           <div class="form-group">
+                                            <label for="osprice">Técnico</label>
+                                            <input type="text" class="form-control" id="ostecnico" name="ostecnico" value="{$os.ostecnico}">
+                                          </div>
+                                      </div>
+                                  <!-- end create -->
+                          </div>
+                          <div class ="col-md-6">
+                            <div class="form-group">
+                            <label for="oscharge">Taxa de serviço</label>
+                            <input type="text" class="form-control" id="oscharge" name="oscharge" value="{$os.oscharge}">
+                          </div>
+                      </div>
+                      <div class ="col-md-6">
+                        <div class="form-group">
+                        <label for="oslabor">Mão de obra</label>
+                        <input type="text" class="form-control" id="oslabor" name="oslabor" value="{$os.oslabor}">
+                      </div>
+                      <input type="hidden" name="idos" value="{$os.idos}">
+                  </div>
+                                 <!-- /.box-body -->
+                          <div class="box-footer">
+                            <button type="submit" class="btn btn-success on">Salvar</button>
+                          </div>
+                 </form>
+           </div>
+         </div>
+       </div>
+
+    </section>
+ <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+  var image1 = document.querySelector('.image1');
+  var image2 = document.querySelector('.image2');
+  var file1 = document.querySelector('.file1');
+  var file2 = document.querySelector('.file2');
+  var upload = document.querySelector('.upload')
+  var innerhtml = document.querySelector('.innerhtml')
+
+  file1.addEventListener('change', e=>{
+          var slice = file1.value;
+           var res = slice.slice(12)
+          image1.value = res;
+
+      })
+
+      file2.addEventListener('change', e=>{
+          var slice = file2.value;
+           var res = slice.slice(12)
+          image2.value = res;
+
+      })
+
+</script>
