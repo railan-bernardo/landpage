@@ -5,10 +5,10 @@ namespace Curso\DB;
 class Sql {
 
 
-    const HOSTNAME = "198.178.122.76";
-    const USERNAME = "cacursos_adminuser20";
-    const PASSWORD = "Ne_yo385x";
-    const DBNAME   = "cacursos_dbpage";
+    const HOSTNAME = "";
+    const USERNAME = "";
+    const PASSWORD = "";
+    const DBNAME   = "";
 
     private $conn;
 
